@@ -9,4 +9,9 @@ public class Recursion {
             return 1 + wordLength(word.substring(1));
         }
     }
+
+    public int stringLength(String str) {
+        if (str == null) throw new IllegalArgumentException("word cannot be null");
+        return 0;
+    }
 }
