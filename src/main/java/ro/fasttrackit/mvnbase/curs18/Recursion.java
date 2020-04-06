@@ -15,7 +15,7 @@ public class Recursion {
         if (str.isEmpty()) {
             return 0;
         } else {
-            return 1;
+            return 1 + stringLength(str.substring(1));
         }
     }
 }
