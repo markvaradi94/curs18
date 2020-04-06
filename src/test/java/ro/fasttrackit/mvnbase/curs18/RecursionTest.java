@@ -16,7 +16,11 @@ class RecursionTest {
         recursion = new Recursion();
     }
 
-
+    @Test
+    @DisplayName("WHEN null is received THEN throw exception")
+    void nullInput() {
+        assertThrows(IllegalArgumentException.class, () -> recursion.stringLength(null));
+    }
 
     @Test
     @DisplayName("WHEN null is received THEN throw exception")
