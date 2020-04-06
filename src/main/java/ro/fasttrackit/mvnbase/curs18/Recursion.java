@@ -12,6 +12,10 @@ public class Recursion {
 
     public int stringLength(String str) {
         if (str == null) throw new IllegalArgumentException("word cannot be null");
-        return 1;
+        if (str.isEmpty()) {
+            return 0;
+        } else {
+            return 1;
+        }
     }
 }
