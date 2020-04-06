@@ -47,9 +47,15 @@ class RecursionTest {
     }
 
     @Test
-    @DisplayName("WHEN null is received THEN throw exception")
+    @DisplayName("WHEN null is being searched THEN throw exception")
     void nullSearch() {
         assertThrows(IllegalArgumentException.class, () -> recursion.firstUppercase(null));
+    }
+
+    @Test
+    @DisplayName("WHEN empty string is being searched THEN throw exception")
+    void emptySearch() {
+        assertThrows(IllegalArgumentException.class, () -> recursion.firstUppercase(""));
     }
 
 }
