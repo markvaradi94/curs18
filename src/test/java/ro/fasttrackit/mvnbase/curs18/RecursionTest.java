@@ -23,6 +23,12 @@ class RecursionTest {
     }
 
     @Test
+    @DisplayName("WHEN empty string is received THEN 0 is returned")
+    void emptyString() {
+        assertThat(recursion.stringLength("")).isEqualTo(0);
+    }
+
+    @Test
     @DisplayName("WHEN null is received THEN throw exception")
     void nullLength() {
         assertThrows(IllegalArgumentException.class, () -> recursion.wordLength(null));

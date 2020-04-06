@@ -12,6 +12,6 @@ public class Recursion {
 
     public int stringLength(String str) {
         if (str == null) throw new IllegalArgumentException("word cannot be null");
-        return 0;
+        return 1;
     }
 }
