@@ -1,5 +1,7 @@
 package ro.fasttrackit.mvnbase.curs18;
 
+import static java.lang.Character.isUpperCase;
+
 public class Recursion {
     public int wordLength(String word) {
         if (word == null) throw new IllegalArgumentException("word cannot be null");
@@ -10,12 +12,7 @@ public class Recursion {
         }
     }
 
-    public int stringLength(String str) {
-        if (str == null) throw new IllegalArgumentException("word cannot be null");
-        if (str.isEmpty()) {
-            return 0;
-        } else {
-            return 1 + stringLength(str.substring(1));
-        }
+    public char firstUppercase(String word) {
+        return word.charAt(0);
     }
 }

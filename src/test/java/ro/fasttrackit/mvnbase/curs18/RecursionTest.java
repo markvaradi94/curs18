@@ -17,27 +17,9 @@ class RecursionTest {
     }
 
     @Test
-    @DisplayName("WHEN null is received THEN throw exception")
-    void nullInput() {
-        assertThrows(IllegalArgumentException.class, () -> recursion.stringLength(null));
-    }
-
-    @Test
     @DisplayName("WHEN empty string is received THEN 0 is returned")
     void emptyString() {
-        assertThat(recursion.stringLength("")).isEqualTo(0);
-    }
-
-    @Test
-    @DisplayName("WHEN 1 letter is received THEN 1 is returned")
-    void oneLetter() {
-        assertThat(recursion.stringLength("a")).isEqualTo(1);
-    }
-
-    @Test
-    @DisplayName("WHEN apple is received THEN 5 is returned")
-    void appleStringLength() {
-        assertThat(recursion.stringLength("apple")).isEqualTo(5);
+        assertThat(recursion.wordLength("")).isEqualTo(0);
     }
 
     @Test
@@ -62,6 +44,12 @@ class RecursionTest {
     @DisplayName("WHEN Neurofibromatosis is received THEN 17 is returned")
     void longWord() {
         assertThat(recursion.wordLength("Neurofibromatosis")).isEqualTo(17);
+    }
+
+    @Test
+    @DisplayName("WHEN null is received THEN throw exception")
+    void nullSearch() {
+        assertThrows(IllegalArgumentException.class, () -> recursion.firstUppercase(null));
     }
 
 }
