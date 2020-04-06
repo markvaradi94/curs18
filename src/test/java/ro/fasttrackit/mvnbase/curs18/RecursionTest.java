@@ -31,7 +31,7 @@ class RecursionTest {
     @Test
     @DisplayName("WHEN 1 letter is received THEN 1 is returned")
     void oneLetter() {
-        assertThat(recursion.stringLength("a")).isEqualTo(2);
+        assertThat(recursion.stringLength("a")).isEqualTo(1);
     }
 
     @Test
