@@ -13,6 +13,7 @@ public class Recursion {
     }
 
     public char firstUppercase(String word) {
+        if (word == null) throw new IllegalArgumentException("word cannot be null");
         return word.charAt(0);
     }
 }
