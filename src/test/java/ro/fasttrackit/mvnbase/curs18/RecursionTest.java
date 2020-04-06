@@ -35,6 +35,12 @@ class RecursionTest {
     }
 
     @Test
+    @DisplayName("WHEN apple is received THEN 5 is returned")
+    void appleStringLength() {
+        assertThat(recursion.stringLength("apple")).isEqualTo(5);
+    }
+
+    @Test
     @DisplayName("WHEN null is received THEN throw exception")
     void nullLength() {
         assertThrows(IllegalArgumentException.class, () -> recursion.wordLength(null));
